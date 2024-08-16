@@ -1,0 +1,356 @@
+/*MENU BAR*/
+/* Original styles for larger screens */
+.dropbtn {
+    background-color: #22b3c1;
+    color: white;
+    padding: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #22b3c1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #228088;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #228088;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 768px) {
+    .dropdown {
+      display: block; /* Show the dropdown as a block on smaller screens */
+    }
+  
+    .dropdown-content {
+      position: static; /* Remove absolute positioning */
+      display: none; /* Hide the dropdown content by default */
+      background-color: #22b3c1;
+      box-shadow: none;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block; /* Show the dropdown content when the dropdown is hovered */
+    }
+  
+    .dropdown:hover .dropbtn {
+      background-color: #22b3c1; /* Change hover background color */
+    }
+  }
+
+  @media (min-width:992px){
+    .col-lg-7.searchactivity{
+    width:58.33333333% !important;
+    flex:0 0 auto ;
+}}
+
+  .searchactivity input[type="search"],
+.searchactivity .input-group-text {
+  border-color: #28a745; /* Border color for focus and hover state */
+}
+
+
+
+.searchactivity input[type="search"] {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+    background-color: #28a745; /* Green background color */
+    color: #ffffff; /* Text color */
+  }
+
+  .searchactivity span{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  }
+
+  .searchactivity .input-group-text {
+    background-color: #28a745; /* Green background color for the button */
+    border-color: #28a745; /* Button border color */
+    color: #ffffff; /* Button text color */
+  }
+  
+  .searchactivity input[type="search"]:focus,
+  .searchactivity .input-group-text:focus {
+    box-shadow: none;
+    border-color: #28a745; /* Adjust border color on focus */
+  }
+  
+  .searchactivity input[type="search"]::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Adjust placeholder color */
+  }
+
+  .pd-5{
+    padding: 5px;
+  }
+
+  .mg-3{
+    margin: 3px;
+  }
+
+  .mg-top-10{
+    margin-top: 10px;
+  }
+
+  .justify-center{
+    justify-content: center;
+  }
+
+  .justify-right{
+    justify-content:right;
+  }
+
+  .justify-left{
+    justify-content:left;
+  }
+  
+  .main-button {
+    display: flex;
+    align-items: center; /* Center the button content vertically */
+     /* Center the button content horizontally */
+    height: 100%; /* Ensure the button takes the full height of its parent */
+  }
+
+  .image{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .width100{
+    width: 100% !important;
+  }
+
+  .dateloca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    text-align: center; /* Optional: If you want the text centered */
+  }
+  
+  /* Optional: If you want some space between the icon and text */
+  .dateloca i {
+    padding-right: 5px;
+  }
+
+  .col-lg-12 pre {
+    white-space: pre-wrap;
+}
+
+.search-form #btnreq a{
+  color: #fff !important;
+}
+
+.search-form #btnreq a:hover{
+  color: #22b3c1 !important;
+}
+
+.reservation-form #poster {
+    padding: 30px 0px;
+    background-color: #f9f9f9;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+.reservation-form #admindashboard{
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 23px;
+  border-top-right-radius: 23px;
+}
+
+
+
+.br-23{
+  border-bottom-right-radius: 23px !important;
+  border-bottom-left-radius: 23px !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.reservation-form #admindashboard h4 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*Upload poster form mula*/
+/* Style for the file input container */
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 25px;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: left; /* Center items horizontally */
+    text-align: center; /* Center the content */
+}
+
+/* Style for the actual file input */
+.file-input-container input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Style for the visible button */
+.file-input-container .file-input-button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #22b3c1;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+/* Hover effect for the button */
+.file-input-container .file-input-button:hover {
+    background-color: #2980b9;
+}
+
+
+/*Upload poster form habis*/
+
+.borderadd{
+    border-top-right-radius: 23px;
+    border-top-left-radius: 23px;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.shorten {
+  overflow: hidden;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  height: 116px;
+  max-width: 100%; /* Adjust this value based on your design */
+}
+
+/* Resetting default input styles */
+        input[type="submit"] {
+            border: none;
+            padding: 0;
+            background: none;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Styling the transparent submit button */
+        .transparent-button {
+            background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value for transparency */
+            color: #fff; /* Text color */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .transparent-button:hover{
+          color: #22b3c1;
+        }
+
+/*untuk description*/
+.reservation-form #reservation-form textarea,
+.reservation-form #reservation-form select {
+  width: 100%;
+  height: 46px;
+  background-color: transparent;
+  border-radius: 23px;
+  border: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.reservation-form #reservation-form textarea.date {
+  color: #aaa;
+  
+}
+/*habis*/
+
+.image-container{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination li {
+  display: inline;
+  margin-right: 5px; /* Adjust spacing between pagination items */
+}
+
+.pagination a,
+.pagination .active span {
+  padding: 5px 10px;
+  border: 1px solid #ddd; /* Customize border color */
+  color: #333; /* Customize text color */
+  text-decoration: none;
+}
+
+.pagination .active a,
+.pagination .active span {
+  background-color: #007bff; /* Customize active background color */
+  color: #fff; /* Customize active text color */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+    .btn-black {
+        
+        --bs-btn-color: #000000;
+        --bs-btn-bg: #000;  /* Set the background color to black */
+        --bs-btn-border-color: #000;  /* Set the border color to black */
+    }
+
+    /* Additional styling if needed */
+    .btn-black:hover {
+        --bs-btn-hover-bg: #333;  /* Darker background color on hover */
+        --bs-btn-hover-border-color: #333;  /* Darker border color on hover */
+    }
+

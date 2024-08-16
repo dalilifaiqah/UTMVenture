@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contents="ie=edge">
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Activity</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 ">
+          <span>1 of 3</span>
+        </div>
+        <div class="col-4">
+          <span>2 of 3 (wider)</span>
+        </div>
+        <div class="col-4">
+          <span>3 of 3</span>
+        </div>
+      </div>
+    </div>
+    <div>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Activity Title</th>
+                <th>Activity Date</th>
+                <th>Activity Location</th>
+                <th>Descriptions</th>
+                <th>Poster Photos</th>
+                <th>GForm Link</th>
+                <th>Form End Date</th>
+            </tr>
+            @foreach($activities as $activity)
+                <tr>
+                    <td>{{$activity->id}}</td>
+                    <td>{{$activity->title}}</td>
+                    <td>{{$activity->actdate}}</td>
+                    <td>{{$activity->location}}</td>
+                    <td>{{$activity->description}}</td>
+                    <td>{{$activity->photo_path}}</td>
+                    <td>{{$activity->link}}</td>
+                    <td>{{$activity->duedate}}</td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
+</body>
+</html>

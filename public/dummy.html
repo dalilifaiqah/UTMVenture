@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>WoOx Travel - Special Deals</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!--C:\xampp\htdocs\UTMV\public\assets-->
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-woox-travel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{{ asset('assets/css/activity.css') }}">
+<!--
+
+TemplateMo 580 Woox Travel
+
+https://templatemo.com/tm-580-woox-travel
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container" style="height: 70px;">
+        <div class="row" style="margin: 5px;">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <!--<img src="assets/images/logo.png" alt="">-->
+                        <h1 style="padding: 5px;">UTMVENTURE</h1>
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="useractivity.html" class="active">Activities/Events</a></li>
+                        <li><a href="visitorguidance.html">Visitor Guidance</a></li>
+                        <li><div class="dropdown">
+                          <button class="dropbtn">Siti Khadijah</button>
+                          <div class="dropdown-content">
+                            <a href="#">User Profile</a>
+                            <a href="#">Logout</a>
+                            <!--<a href="#">Link 3</a>-->
+                          </div>
+                        </div></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h4>Lets earn more merits!</h4>
+          <h2>Activities in UTM</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-form">
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-12">
+          <form id="search-form" name="gs" method="submit" role="search" action="#">
+            <div class="row justify-center">
+              <div class="col-lg-2 justify-right">
+                <h4>Sort Deals By:</h4>
+              </div>
+              <div class="col-lg-7 searchactivity input-group pd-5">
+                <input type="search" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                <span class=" input-group-text border-0" id="search-addon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </div>
+              <div class="col-lg-3 pd-5">                        
+                <fieldset id="btnreq">
+                    <button class="">
+                      <a href="">
+                        Request to Advertise
+                      </a>
+                    </button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   
+
+
+  <div class="amazing-deals">
+    <div class="container" style="padding-top: 50px"> 
+      <div class="row">
+        @foreach($activities as $activity)
+          <div class="col-lg-6 col-sm-6">
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-6">
+                  
+                  <div class="image width100">
+                  <img src="assets/images/deals-01.jpg" alt="">
+                </div>
+                  
+                </div>
+                <div class="col-lg-6 align-self-center">
+                  <div class="content">
+                    <!--<span class="info">*Limited Offer Today</span>-->
+                    <h4>{{$activity->title}}</h4><!--title-->
+                    <div class="row">
+                      <div class="col-6">
+                        <i class="fa-regular fa-calendar-xmark"></i>
+                        <span class="list">{{$activity->duedate}}</span>
+                      </div>
+                      <div class="col-6">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="list">{{$activity->location}}</span>
+                      </div>
+                    </div>
+                    <p class="shorten">{{$activity->description}}</p>
+                    <div class="row">
+                      <div class="col-7 main-button">
+                        <a href="activitydetail.html">More Details</a>
+                      </div>
+                      <div class="col-5 m-auto d-flex align-items-center justify-content-center" >
+                        <div class="">
+                          <i class="fa-solid fa-tag"></i>
+                          <span class="list ">{{$activity->type}}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforeach
+        
+        
+        
+        <div class="col-lg-12">
+          <ul class="page-numbers">
+            <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="mg-top-10">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">WoOx Travel</a> Company. All rights reserved. 
+          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+  <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
+  <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>
+  <script src="{{ asset('assets/js/assets/js/wow.js') }}"></script>
+  <script src="{{ asset('assets/js/tabs.js') }}"></script>
+  <script src="{{ asset('assets/js/popup.js') }}"></script>
+  <script src="{{ asset('assets/js/custom.js') }}"></script>
+
+  <script>
+    $(".option").click(function(){
+      $(".option").removeClass("active");
+      $(this).addClass("active"); 
+    });
+  </script>
+
+  </body>
+
+</html>
